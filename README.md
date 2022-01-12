@@ -17,3 +17,5 @@ After toggling on the Camera post-processing, the option for `AMD FSR 1.0` will 
 
 # NOTE
 At present, if you turn on FSR, the anti-aliasing (MSAA) setting will be set to 8X by default. You can change this to a lower MSAA level or other anti-aliasing solution. However, keep in mind that FSR 1.0 requires an anti-aliasing process before it can work. This is the MSAA setting: `settings.msaaSampleCount = 8;`
+
+Mobile platforms (including those in standalone VR headsets) are not guaranteed to work due to the current compute shader implementation.
