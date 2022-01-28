@@ -7,7 +7,16 @@ While this patch file targets URP 10.6.0 in particular, you can still use this p
 # Integration Method
 
 ## Method 1. git apply
-Use `git apply <path to patch>` when it's possible, from the correct place in your Unity project.
+Example:
+I have my project in:
+`E:/Unity/The Game/`
+
+I should put the `.patch` file in `E:/Unity/The Game/library/PackageCache`
+I should make a console and write
+```
+cd E:/Unity/The Game/library/PackageCache
+git apply FSR1.0-For-URP10.6.0-Patch.patch
+```
 
 ## Method 2. manually merge
 Use a normal editor to open this patch file. Look through all the diffs, and merge it into your local URP code manually.
