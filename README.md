@@ -6,11 +6,12 @@ While this patch file targets URP 10.6.0 in particular, you can still use this p
 
 # Integration Method
 
-> For method 1 and 2 you need to have [git](https://git-scm.com/downloads) installed
+> For method 1, 2 and 3 you need to have [git](https://git-scm.com/downloads) installed
 
 ## Method 1. running `installPatch.bat`
 
-Download the `installPatch.bat` file and put it into the root folder of your unity project, then run it by double clicking
+Download the `installPatch.bat` file and put it into the root folder of your unity project.  
+Then run it by double clicking.
 
 ## Method 2. git apply and curl
 
@@ -24,17 +25,15 @@ curl "https://raw.githubusercontent.com/GPUOpen-Effects/FidelityFX-FSR-Unity-URP
 
 ## Method 3. git apply
 Example:
-I have my project in: `E:\Unity\The Game\`
-
-I should put the `.patch` file in `E:/Unity/The Game/library/PackageCache`.  
-I should make a console and write.  
+I have my project in: `E:\Unity\The Game\` then, I should put the `.patch` file in `E:\Unity\The Game\library\PackageCache`.  
+Finally, I should make a console and write.  
 ```
 cd /D E:\Unity\The Game\library\PackageCache
 git apply FSR1.0-URP10.6.0.patch
 ```
 
 ## Method 4. manually merge
-Use a normal editor to open this patch file. Look through all the diffs, and merge it into your local URP code manually. It's in
+Use a normal editor to open this patch file. Look through all the diffs, and merge it into your local URP code manually.
 
 # Usage
 After toggling on the Camera post-processing, the option for `AMD FSR 1.0` will appear below it. You can choose different FSR modes according to your requirements.
