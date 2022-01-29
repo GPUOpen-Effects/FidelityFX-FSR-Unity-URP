@@ -6,7 +6,13 @@ While this patch file targets URP 10.6.0 in particular, you can still use this p
 
 # Integration Method
 
-## Method 1. git apply
+> For method 1 and 2 you need to have [git](https://git-scm.com/downloads) installed
+
+## Method 1. running installPatch.bat
+
+Download the `installPatch.bat` file and put it into the root folder of your unity project, then run it by double clicking
+
+## Method 2. git apply
 Example:
 I have my project in:
 `E:/Unity/The Game/`
@@ -15,10 +21,10 @@ I should put the `.patch` file in `E:/Unity/The Game/library/PackageCache`
 I should make a console and write
 ```
 cd E:/Unity/The Game/library/PackageCache
-git apply FSR1.0-For-URP10.6.0-Patch.patch
+git apply FSR1.0-URP10.6.0.patch
 ```
 
-## Method 2. manually merge
+## Method 3. manually merge
 Use a normal editor to open this patch file. Look through all the diffs, and merge it into your local URP code manually.
 
 # Usage
