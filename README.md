@@ -2,14 +2,37 @@
 AMD FidelityFX Super Resolution (FSR) is an open source, high-quality solution for producing high resolution frames from lower resolution inputs. It uses a collection of cutting-edge algorithms with a particular emphasis on creating high-quality edges, giving large performance improvements compared to rendering at native resolution directly.  FSR enables “practical performance” for costly render operations, such as hardware ray tracing.
 
 # Version
-While this patch file targets URP 10.6.0 in particular, you can still use this patch for other versions (including newer) with a few careful changes.
+While this patch file targets URP 10.6.0 in particular, you can still use this patch for other versions (including newer) with a few careful changes, you probably will need to using the method 4.
 
 # Integration Method
 
-## Method 1. git apply
-Use `git apply <path to patch>` when it's possible, from the correct place in your Unity project.
+> For method 1, 2 and 3 you need to have [git](https://git-scm.com/downloads) installed
 
-## Method 2. manually merge
+## Method 1. running `installPatch.bat`
+
+Download the `installPatch.bat` file and put it into the root folder of your unity project.  
+Then run it by double clicking.
+
+## Method 2. git apply and curl
+
+Example:
+I have my project in: `E:\Unity\The Game\`
+
+```
+cd /D E:\Unity\The Game\library\PackageCache
+curl "https://raw.githubusercontent.com/GPUOpen-Effects/FidelityFX-FSR-Unity-URP/c96f5b0843cd56132693953f190e54eb93b58849/FSR1.0-For-URP10.6.0-Patch.patch" | git apply
+```
+
+## Method 3. git apply
+Example:
+I have my project in: `E:\Unity\The Game\` then, I should put the `.patch` file in `E:\Unity\The Game\library\PackageCache`.  
+Finally, I should make a console and write.  
+```
+cd /D E:\Unity\The Game\library\PackageCache
+git apply FSR1.0-URP10.6.0.patch
+```
+
+## Method 4. manually merge
 Use a normal editor to open this patch file. Look through all the diffs, and merge it into your local URP code manually.
 
 # Usage
