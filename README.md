@@ -12,19 +12,28 @@ While this patch file targets URP 10.6.0 in particular, you can still use this p
 
 Download the `installPatch.bat` file and put it into the root folder of your unity project, then run it by double clicking
 
-## Method 2. git apply
-Example:
-I have my project in:
-`E:/Unity/The Game/`
+## Method 2. git apply and curl
 
-I should put the `.patch` file in `E:/Unity/The Game/library/PackageCache`
-I should make a console and write
+Example:
+I have my project in: `E:\Unity\The Game\`
+
 ```
-cd E:/Unity/The Game/library/PackageCache
+cd /D E:\Unity\The Game\library\PackageCache
+curl "https://raw.githubusercontent.com/GPUOpen-Effects/FidelityFX-FSR-Unity-URP/c96f5b0843cd56132693953f190e54eb93b58849/FSR1.0-For-URP10.6.0-Patch.patch" | git apply
+```
+
+## Method 3. git apply
+Example:
+I have my project in: `E:\Unity\The Game\`
+
+I should put the `.patch` file in `E:/Unity/The Game/library/PackageCache`.  
+I should make a console and write.  
+```
+cd /D E:\Unity\The Game\library\PackageCache
 git apply FSR1.0-URP10.6.0.patch
 ```
 
-## Method 3. manually merge
+## Method 4. manually merge
 Use a normal editor to open this patch file. Look through all the diffs, and merge it into your local URP code manually. It's in
 
 # Usage
